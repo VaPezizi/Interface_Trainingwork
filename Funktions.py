@@ -94,12 +94,12 @@ def register():
                 else:                                                       #If passwords dont match
                     print("Passwords didn't match, try again")
                     input("Press enter to continue...")
-        else:                                                           #If username contains spaces
-            print("Username cant contain any spaces, try again")
+            else:                                                           #If username contains spaces
+                print("Username cant contain any spaces, try again")
+                input("Press enter to continue...")
+        else:                                                           #If username is too long
+            print("Username cant contain more than 30 charachters, try again")
             input("Press enter to continue...")
-    else:                                                           #If username is too long
-        print("Username cant contain more than 30 charachters, try again")
-        input("Press enter to continue...")
 
 def logged_in(usrname: str):
     """
