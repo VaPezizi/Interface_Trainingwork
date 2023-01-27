@@ -32,7 +32,7 @@ def login() -> str:
                 if twoparts[1] == hashed and twoparts[0] == usrname: #Checking to see if username and password match in that line
                     t.close()
                     return usrname
-        print("Username or parssword incorrect, please try again") #This code runs only if username or password is incorrect
+        print("Username or password incorrect, please try again") #This code runs only if username or password is incorrect
         input("Press enter to continue...")
 
 def register():
@@ -214,5 +214,6 @@ def trollface():
     ⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣤⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
     ⣿⣿⣿⣿⣿⣿⣿⣦⣤⣤⣤⣤⣤⣤⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿"""
     print(NotTrollface)
+    print("Note: All Terminal like programs dont support the characters so this might not work for everyone")
 #login()
 #register()
