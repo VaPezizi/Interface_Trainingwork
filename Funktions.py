@@ -130,7 +130,7 @@ def logged_in(usrname: str):
                 if kysely == 5:
                     trollface()
             else:
-                input("Please enter option 1, 2, 3 or 4 (Press any button to continue)")
+                input("Please enter option 1, 2, 3 or 4 (Press enter to continue)")
 
 def print_pyramid():
     """
