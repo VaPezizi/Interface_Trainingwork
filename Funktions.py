@@ -14,13 +14,16 @@ def login() -> str:
     username, if not then credentials are asked again
     """
     while True:
-        usrname = input("Enter your username: ")
+        usrname = input("Enter your username(Leave empty to exit): ")
+        if usrname == "":
+            return ""
         pswrd = getpass.getpass(prompt="Enter your password: ")
-        hashed = hashlib.sha256(pswrd.encode("utf-8")).hexdigest() #Hashing the password with SHA-256 and turning it into "readable" format
-
+        hashed = hashlib.sha256(pswrd.encode("utf-8")).hexdigest()
+        #Hashing the password with SHA-256 and turning it into "readable" format
         #Changed from md5 to sha-256 after teachers advice, and finding out that people have actually been able to decypher md5 hashes
-        #I did however think that salting the passwords would be a little overkill for such a small project, if i ever do something using this as a template
-        #- and put it online, then i'll definetly look into salting more.
+        #I also did look into salting but sadly didn't comeup with a way to get it working with randomized salts.
+        #(Meaning i dont know how i can get the salt to a user thats logging in as when user is logging out)
+        #If the salt is random, then how can the login funktion check if password is correct(If anyone reading has ideas then hit me up, i want to know how its done)
 
         with open("Users.txt") as t:    #Opening the file with user credentials
             for i in t:     #For loop for reading every line seperatly

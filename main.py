@@ -11,7 +11,9 @@ while True:
             if kysely == 1:
                 print("")
                 Username = Funktions.login()
-                Funktions.logged_in(Username)
+                if Username != "":
+                    Funktions.logged_in(Username)
+                
 
             if kysely == 2:
                 Funktions.register()
